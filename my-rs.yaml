@@ -1,0 +1,23 @@
+apiVersion:  apps/v1
+kind:  ReplicaSet
+metadata:
+  name:  myreplica
+  namespace:  iyas-ns
+  labels:
+    app: replica 
+spec:
+  replicas:  3
+  selector:
+    matchLabels:  
+      app:  iyas_app
+  template:
+    metadata:
+      labels:
+        app:  iyas_app
+    spec:
+      containers:
+        - name:  iyas-app-cont
+          image:  iyask/flask-micro:v1.1.0
+          ports:
+            - containerPort:  5000
+    
