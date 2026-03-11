@@ -1,0 +1,14 @@
+apiVersion:  v1
+kind:  Pod
+metadata:  
+  name:  iyas-pod 
+  namespace:  iyas-ns
+  labels: 
+    app:  mypod
+spec:
+  containers:
+     - name:  iyasapp
+       image:  iyask/flask-micro:v1.1.0
+       ports:
+         - containerPort: 5000
+         
