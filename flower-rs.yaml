@@ -1,0 +1,23 @@
+apiVersion:  apps/v1
+kind:  ReplicaSet
+metadata:
+  name:  photo-app-rs
+  labels:  
+    app:  myreplica2
+  namespace:  iyas-ns
+spec:
+  replicas:  3
+  selector:
+    matchLabels:
+      app: photo-app
+  template:  
+    metadata:
+      labels:
+        app:  photo-app
+    spec:
+      containers:
+        - name: photo-app-cont
+          image: iyask/photo-app:v1.1.0
+          ports:
+            - containerPort: 3000
+
