@@ -1,25 +1,21 @@
 ReplicaSet
-│
-├─ apiVersion
-├─ kind
-├─ metadata
-│   ├─ name
-│   ├─ namespace
-│   └─ labels
-│
-└─ spec
-    ├─ replicas
-    ├─ selector
-    │    └─ matchLabels
-    │
-    └─ template
+ ├─ apiVersion
+ ├─ kind
+ ├─ metadata
+ │   ├─ name
+ │   ├─ namespace
+ │   └─ labels
+ └─ spec
+     ├─ replicas
+     ├─ selector
+     │   └─ matchLabels
+     └─ template
          ├─ metadata
-         │    └─ labels
-         │
+         │   └─ labels
          └─ spec
-              └─ containers
-                   └─ container
-                        ├─ name
-                        ├─ image
-                        └─ ports
-                             └─ containerPort
+             └─ containers
+                 └─ container
+                     ├─ name
+                     ├─ image
+                     └─ ports
+                         └─ containerPort
