@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion:  apps/v1
 kind:  ReplicaSet
 metadata: 
   name: ey-cart-rs 
@@ -15,8 +15,8 @@ spec: #This first spec defines behaviour of replica set
       labels:
         app:  web
     spec:  #It contains the container definition
-      container:
+      containers:
         - name:  ey-cart-container
           image:  muralisocial123/ey-cart:v1.1.0
-          port:
+          ports:
             - containerPort: 3000
