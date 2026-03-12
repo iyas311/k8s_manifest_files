@@ -1,0 +1,22 @@
+apiVersion:  apps/v1
+kind:  Deployment
+metadata:
+  labels:
+    app:  ey-cart-Deployment
+  name:  ey-cart-Deployment
+  namespace:  iyas-ns
+spec: 
+  replicas:  3
+  selector:
+    matchLabels:  
+      app:  ey-cart
+  template:
+    metadata:
+      labels:
+        app:  ey-cart
+    spec:
+      containers:
+        - name: cart-cont
+          image:  muralisocial123/ey-cart:v1.1.0
+          ports:
+            - containerPort: 80
