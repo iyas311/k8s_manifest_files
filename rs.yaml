@@ -17,6 +17,6 @@ spec: #This first spec defines behaviour of replica set
     spec:  #It contains the container definition
       containers:
         - name:  ey-cart-container
-          image:  muralisocial123/ey-cart:v1.1.0
+          image:  muralisocial123/flipkart-app-web:v1.1.0
           ports:
             - containerPort: 3000
