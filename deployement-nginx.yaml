@@ -2,8 +2,8 @@ apiVersion:  apps/v1
 kind:  Deployment
 metadata:
   labels:
-    app:  ey-cart-Deployment
-  name:  ey-cart-Deployment
+    app:  ey-cart-deployment
+  name:  ey-cart-deployment
   namespace:  iyas-ns
 spec: 
   replicas:  3
