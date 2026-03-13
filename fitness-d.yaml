@@ -24,7 +24,7 @@ spec:
         - name:  rollcont
           image:  muralisocial123/fitness-app:v1.0.1
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
 ---
 apiVersion:  v1
 kind:  Service
@@ -39,7 +39,7 @@ spec:
       targetPort:  3000 #It is a container port number
       protocol: TCP
   type: ClusterIP
-  
+
       
 
 
