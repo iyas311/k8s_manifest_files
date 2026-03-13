@@ -1,0 +1,29 @@
+apiVersion:  apps/v1
+kind:  Deployment
+metadata:
+  name:  roll-dep
+  labels:  
+    app:  roll-dep
+  namespace:  iyas-ns
+spec:
+  replicas:  8
+  strategy:
+    type:  RollingUpdate
+    rollingUpdate:
+      maxUnavailable:  25%
+      maxSurge:  25%
+  selector:
+    matchLabels:  
+      app:  roll-app
+  template:
+    metadata:
+      labels:
+        app:  roll-app
+    spec:
+      containers:
+        - name:  rollcont
+          image:  muralisocial123/fitness-app:v1.0.1
+          ports:
+            - containerPort: 3000
+        
+      
