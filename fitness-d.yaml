@@ -22,8 +22,8 @@ spec:
     spec:
       containers:
         - name:  rollcont
-          image:  muralisocial123/fitness-app:v1.0.1
+          image:  muralisocial123/kyndrl-flower-app:v1.1.0
           ports:
-            - containerPort: 3000
+            - containerPort: 3015
         
       
